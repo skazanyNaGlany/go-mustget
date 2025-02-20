@@ -26,7 +26,8 @@ func main() {
 		"key": "some value",
 	}
 
-	value := mustget.MustGet(someMap, "key").(string)
+	// it will panic because the key does not exists in the map
+	value := mustget.MustGet(someMap, "key123").(string)
 
 	log.Println(value)
 }
